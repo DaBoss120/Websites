@@ -21,11 +21,22 @@ h1 {
     left: 50%;
     top: 50%;
     font-size: 200px;
+    animation: bounceInLeft 1.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.expressive{
+
+@keyframes bounceInLeft {
+    from {
+        left: -50%;
+    }
+}
+
+.expressive {
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
     font-size: 200px;
+}
+@keyframes revealLetterByLetterFromBottom {
+    
 }
