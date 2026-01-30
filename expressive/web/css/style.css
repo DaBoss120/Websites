@@ -1,0 +1,31 @@
+@import url(../node_modules/animate.css/animate.min.css);
+
+@font-face {
+    font-family: Awaken Design;
+    src: url(../font/Awaken\ Design.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: Awaken Design;
+}
+
+.meet {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    font-size: 200px;
+}
+.expressive{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    font-size: 200px;
+}
