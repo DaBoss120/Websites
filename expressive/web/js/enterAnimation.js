@@ -88,7 +88,7 @@ function unhighlightText() {
 
     // highlight.style.transformOrigin = 'center center';
     // Animate left to move right, and width to shrink
-    highlight.style.transition = 'left 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), width 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1)';
+    highlight.style.transition = 'left 0.8s cubic-bezier(0.25, 0.1, 0.25, 1), width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1)'; // , transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1)
 
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
