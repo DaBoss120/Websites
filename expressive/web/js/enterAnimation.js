@@ -100,8 +100,22 @@ function unhighlightText() {
 
         });
     });
+    highlight.addEventListener('transitionend', () => {
+        removeIntroText();
+        fadeInBody();
+    });
 }
-
+function removeIntroText() {
+    meetText.style.display = 'none';
+    expressiveText.style.display = 'none';
+}
+function fadeInBody() {
+    let bodyElements = document.querySelectorAll('body :not(.meet):not(.expressive)');
+    bodyElements.forEach(el => {
+        el.style.transition = 'opacity 1s ease-in';
+        el.style.opacity = '1';
+    });
+}
 meetText.addEventListener('animationend', function () {
     meetText.style.opacity = 0;
     let text = document.querySelector('.expressive');

@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expressive</title>
+
     <link rel="stylesheet" href="web/css/style.css">
-    
+    <!-- <link rel="stylesheet" href="web/css/enterAnimation.css"> -->
+
 </head>
-<body>
+
+
+<body style="opacity: 1;">
+    <!-- <h1 class="meet">Meet...</h1>
+    <h1 class="expressive">Expressive</h1> -->
     <header>
         <div class="top-header">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Experience</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="expressive-slide-container">
+            <!-- Force space between the two elements -->
+            <h2 class="expressive-slide" id="expressive-slide"></h2><span>&nbsp;</span>
+
+            <h2 class="expressive-slide" id="expressive-slide" aria-hidden="true">
+            </h2>
         </div>
     </header>
     <main>
-        <h1 class="meet">Meet...</h1>
-        <h1 class="expressive">Expressive</h1>
+        <div class="wide-half-section yellow-bg">
+            <div class="sub-element text-element">
+                <h2>Expressive is a style for the BOLD</h2>
+            </div>
+            <div class="sub-element card-element">
+                <h2>This element is a card</h2>
+                <p>It can have various content inside.</p>
+                <button class="btn-3d-stack">View More</button>
+            </div>
+        </div>
     </main>
 
 </body>
-<script src="./web/js/enterAnimation.js"></script>
+<script src="./web/js/script.js"></script>
+<!-- <script src="./web/js/enterAnimation.js"></script> -->
+
 </html>

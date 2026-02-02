@@ -1,0 +1,124 @@
+@import url(./colors.css);
+
+.wide-tall-section {
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.wide-half-section {
+    width: 100vw;
+    height: clamp(700px, 50vh, 900px);
+}
+
+.wide-tall-section,
+.wide-half-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wide-tall-section.yellow-bg {
+    background-color: var(--yellow);
+}
+
+.wide-half-section.yellow-bg {
+    background-color: var(--yellow);
+}
+
+.sub-element {
+    width: 450px;
+    height: 600px;
+    margin: 0 30px;
+}
+
+.card-element {
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 10px double black;
+}
+.card-element > h2, .card-element > p {
+    margin-bottom: 15px;
+}
+.btn-3d-stack{
+    position: relative;
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    font-family: LuckiestOne;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    isolation: isolate;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+.btn-3d-stack:hover{
+    background-color: var(--yellow);
+    color: black;
+    transform: translate(-2px, 2px);
+}
+
+.btn-3d-stack:hover::after{
+    left: 4px;
+    top: -4px;
+}
+
+.btn-3d-stack:hover::before{
+    left: 8px;
+    top: -8px;
+}
+
+.btn-3d-stack::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid black;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    transition: left 0.3s, top 0.3s;
+    box-sizing: border-box;
+}
+.btn-3d-stack::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid black;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
+    transition: left 0.3s, top 0.3s;
+    box-sizing: border-box;
+}
+
+/* From Uiverse.io by satyamchaudharydev */ 
+/* inspired form gumroad website */
+.button {
+  --bg: #000;
+  --hover-bg: #ff90e8;
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
