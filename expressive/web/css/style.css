@@ -37,3 +37,27 @@ h2 {
 li {
     list-style: none;
 }
+.txt-huge{
+        font-size: 6rem;
+}
+.txt-big{
+    font-size: 3rem;
+}
+.scroll-reveal-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3em;
+}
+
+.scroll-reveal-text .word {
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.scroll-reveal-text .word.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
