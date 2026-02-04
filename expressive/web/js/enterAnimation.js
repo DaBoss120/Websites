@@ -110,7 +110,8 @@ function removeIntroText() {
     expressiveText.style.display = 'none';
 }
 function fadeInBody() {
-    let bodyElements = document.querySelectorAll('body :not(.meet):not(.expressive)');
+    // let bodyElements = document.querySelectorAll('body :not(.meet):not(.expressive)');
+    let bodyElements = document.querySelectorAll('body > header, body > main');
     bodyElements.forEach(el => {
         el.style.transition = 'opacity 1s ease-in';
         el.style.opacity = '1';

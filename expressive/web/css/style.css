@@ -23,26 +23,75 @@
     padding: 0;
     box-sizing: border-box;
 }
-p{
+
+p {
     font-family: LuckiestOne;
+    font-size: 1.2rem;
 }
+
 h1 {
     font-family: Awaken Design;
 }
 
 h2 {
+    font-size: 2rem;
     font-family: AlfaSlabOne;
 }
 
 li {
     list-style: none;
 }
-.txt-huge{
-        font-size: 6rem;
+
+.txt-huge {
+    font-size: 6rem;
 }
-.txt-big{
+
+.txt-big {
     font-size: 3rem;
 }
+
+.txt-italic {
+    display: inline-block;
+    transform: skew(-15deg);
+}
+.txt-italic-revesed {
+    display: inline-block;
+    transform: skew(15deg);
+}
+.txt-tilted-up{
+    display: inline-block;
+    transform: rotate(-15deg);
+
+}
+
+.bg-yellow {
+    background-color: var(--yellow);
+}
+
+.bg-purple {
+    background-color: var(--purple);
+}
+.bg-green {
+    background-color: var(--green);
+}
+.bg-hover-yellow:hover {
+    background-color: var(--yellow);
+}
+.bg-hover-purple:hover {
+    background-color: var(--purple);
+}
+.bg-hover-green:hover {
+    background-color: var(--green);
+}
+
+/* .mark-straight {
+    padding: 0 0.2em;
+    display: inline-block;
+} */
+.mark {
+    padding: 0 0.2em;
+}
+
 .scroll-reveal-text {
     display: flex;
     flex-wrap: wrap;

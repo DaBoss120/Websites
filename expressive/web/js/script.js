@@ -14,11 +14,39 @@ function populateSlideBanner(screenWidth) {
 
 const scrollRevealElements = document.querySelectorAll('.scroll-reveal-text');
 
-// Wrap each word in a span
+// Wrap each word in a span while preserving HTML elements
 scrollRevealElements.forEach(element => {
-    const text = element.textContent;
-    const words = text.split(' ');
-    element.innerHTML = words.map(word => `<span class="word">${word}</span>`).join('');
+    const childNodes = Array.from(element.childNodes);
+    const fragment = document.createDocumentFragment();
+    
+    childNodes.forEach(child => {
+        if (child.nodeType === Node.TEXT_NODE) {
+            // It's a text node - wrap each word in a span
+            const words = child.textContent.split(/(\s+)/); // Keep whitespace
+            
+            words.forEach(word => {
+                if (word.trim() === '') {
+                    // It's whitespace, keep it as is
+                    fragment.appendChild(document.createTextNode(word));
+                } else {
+                    // It's a word, wrap it in a span
+                    const span = document.createElement('span');
+                    span.className = 'word';
+                    span.textContent = word;
+                    fragment.appendChild(span);
+                }
+            });
+        } else if (child.nodeType === Node.ELEMENT_NODE) {
+            // It's an element (like <mark>) - wrap the whole element in a span
+            const span = document.createElement('span');
+            span.className = 'word';
+            span.appendChild(child.cloneNode(true));
+            fragment.appendChild(span);
+        }
+    });
+    
+    element.innerHTML = '';
+    element.appendChild(fragment);
 });
 
 const revealOnScroll = () => {

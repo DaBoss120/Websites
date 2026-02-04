@@ -1,4 +1,9 @@
-body :not(.meet):not(.expressive) {
+/* body :not(.meet):not(.expressive) {
+    opacity: 1;
+} */
+
+body > header,
+body > main{
     opacity: 0;
 }
 
@@ -31,11 +36,11 @@ body :not(.meet):not(.expressive) {
     width: 1200px;
     align-items: center;
     justify-content: center;
-    /* margin-left: 0; */
+    margin-left: 0;
     transition: margin-left 0.75s ease; 
-}
+} */
 
-.expressive span {
+ .expressive span {
     display: inline-block;
     white-space: pre;
     will-change: transform, opacity;
@@ -45,4 +50,3 @@ body :not(.meet):not(.expressive) {
 .highlight-bar {
     will-change: left, width;
 }
-
