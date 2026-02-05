@@ -1,3 +1,4 @@
+document.body.classList.add('no-scroll');
 const meetText = document.querySelector('.meet');
 const expressiveText = document.querySelector('.expressive');
 const highlight = document.createElement('div');
@@ -110,6 +111,8 @@ function removeIntroText() {
     expressiveText.style.display = 'none';
 }
 function fadeInBody() {
+    document.body.classList.remove('no-scroll'); // Add this line
+
     // let bodyElements = document.querySelectorAll('body :not(.meet):not(.expressive)');
     let bodyElements = document.querySelectorAll('body > header, body > main');
     bodyElements.forEach(el => {

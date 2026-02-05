@@ -42,38 +42,65 @@ h2 {
 li {
     list-style: none;
 }
-.txt-huge {
-    font-size: 6rem;
+
+body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .txt-big {
     font-size: 3rem;
 }
+
+.txt-huge {
+    font-size: 6rem;
+}
+
+.txt-huge-responsive {
+    font-size: clamp(2rem, 20vw, 6rem);
+}
+
+.txt-align-center {
+    text-align: center;
+}
+
 .txt-yellow {
     color: var(--yellow);
 }
+
 .txt-purple {
     color: var(--purple);
 }
+
 .txt-green {
     color: var(--green);
 }
+
 .txt-black {
     color: black;
 }
+
 .txt-white {
     color: white;
 }
-.txt-yellow-all *{
+
+.txt-yellow-all * {
     color: var(--yellow) !important;
 }
-.txt-purple-all *{
+
+.txt-purple-all * {
     color: var(--purple) !important;
 }
-.txt-green-all *{
+
+.txt-green-all * {
     color: var(--green) !important;
 }
-.txt-black-all *{
+
+.txt-black-all * {
     color: black !important;
 }
 

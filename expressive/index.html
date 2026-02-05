@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expressive</title>
-
     <link rel="stylesheet" href="web/css/style.css">
+    <link rel="stylesheet" href="web/css/enterAnimation.css">
 </head>
 
-<body style="opacity: 1;">
+<body class="no-scroll"">
+    <h1 class="meet">Meet...</h1>
+    <h1 class="expressive">Expressive</h1>
     <header>
         <div class="top-header">
             <div class="menu">
@@ -19,6 +21,15 @@
                     <li><a href="#">Development</a></li>
                 </ul>
             </div>
+            <label class="hamburger">
+                <input type="checkbox" onclick="toggleMenu()">
+                <img src="./web/svg/HamburgerMenu.svg" alt="Burger Menu Icon" width="30" height="30">
+                <!-- <svg viewBox="0 0 100 80" width="30" height="30">
+                    <rect width="100" height="15"></rect>
+                    <rect y="30" width="100" height="15"></rect>
+                    <rect y="60" width="100" height="15"></rect>
+                </svg> -->
+            </label>
         </div>
         <div class="expressive-slide-container">
             <h2 class="expressive-slide" id="expressive-slide"></h2><span>&nbsp;</span>
@@ -29,12 +40,12 @@
     <main>
         <!-- Hero Section -->
         <div class="wide-tall-section">
-            <h1>Welcome to EXPRESSIVE</h1>
+            <h1 class="txt-align-center txt-huge-responsive">Welcome to EXPRESSIVE</h1>
         </div>
 
         <!-- Intro Section -->
         <div class="wide-tall-section bg-yellow">
-            <h1 class="scroll-reveal-text txt-huge"><mark class="mark bg-purple">Expressive</mark> is a <span
+            <h1 class="scroll-reveal-text txt-huge-responsive"><mark class="mark bg-purple">Expressive</mark> is a <span
                     class="txt-italic">style</span> for the <mark class="mark bg-green txt-tilted-up">BOLD</mark></h1>
         </div>
 
@@ -47,7 +58,7 @@
 
         <!-- Button Showcase -->
         <div class="wide-responsive-section bg-purple">
-            <h1 class="txt-huge">Buttons</h1>
+            <h1 class="txt-huge-responsive">Buttons</h1>
             <p style="max-width: 600px; text-align: center; margin: 20px;">Bold buttons that demand attention and
                 interaction</p>
 
@@ -129,7 +140,7 @@
 
         <!-- Card Showcase -->
         <div class="wide-responsive-section bg-green">
-            <h1 class="txt-huge">Cards</h1>
+            <h1 class="txt-huge-responsive">Cards</h1>
             <p style="max-width: 600px; text-align: center; margin: 20px;">Expressive containers for your content</p>
 
             <div class="wide-responsive-section">
@@ -160,7 +171,7 @@
 
         <!-- Text Styles Showcase Section -->
         <div class="wide-responsive-section">
-            <h1 class="txt-huge">Text Styles</h1>
+            <h1 class="txt-huge-responsive">Text Styles</h1>
 
             <div
                 style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 40px; max-width: 1200px;">
@@ -260,7 +271,7 @@
 
         <!-- Stats Section -->
         <div class="wide-responsive-section bg-yellow">
-            <h1 class="txt-huge">By The Numbers</h1>
+            <h1 class="txt-huge-responsive txt-align-center">By The Numbers</h1>
 
             <div class="wide-responsive-section">
                 <div class="stat-counter">
@@ -272,7 +283,7 @@
                     <span class="stat-label">Components</span>
                 </div>
                 <div class="stat-counter">
-                    <span class="stat-number filled counter" data-target="999">0</span>
+                    <span class="stat-number filled counter" data-target="999" data-plus="true">0</span>
                     <span class="stat-label">Lines of CSS</span>
                 </div>
                 <div class="stat-counter">
@@ -294,7 +305,7 @@
 
         <!-- Features Section -->
         <div class="wide-responsive-section">
-            <h1 class="txt-huge">Features</h1>
+            <h1 class="txt-huge-responsive">Features</h1>
 
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 40px;">
                 <ul class="feature-list" style="max-width: 500px;">
@@ -336,7 +347,7 @@
 
         <!-- Accordion Section -->
         <div class="wide-responsive-section bg-yellow">
-            <h1 class="txt-huge">FAQ</h1>
+            <h1 class="txt-huge-responsive">FAQ</h1>
 
             <div style="max-width: 700px; width: 100%; padding: 20px;">
                 <div class="accordion-item">
@@ -372,7 +383,7 @@
 
         <!-- Badges & Components -->
         <div class="wide-responsive-section bg-purple">
-            <h1 class="txt-huge">Components</h1>
+            <h1 class="txt-huge-responsive">Components</h1>
 
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px;">
                 <span class="badge">NEW</span>
@@ -423,19 +434,25 @@
         </div>
 
         <!-- Footer Banner -->
-        <div class="rotating-banner" style="background-color: var(--yellow);">
-            <div class="rotating-banner-content txt-black-all" id="rotating-banner-footer">
+        <div class="rotating-banner txt-black-all" style="background-color: var(--yellow);">
+            <div class="rotating-banner-content" id="rotating-banner-footer">
                 <!-- Populated by JS -->
             </div>
         </div>
 
         <div class="wide-tall-section bg-green">
-            <h1 class="scroll-reveal-text txt-huge">Be <mark class="mark bg-yellow">BOLD</mark>. Be <mark
-                    class="mark bg-purple">EXPRESSIVE</mark>.</h1>
+            <h1 class="scroll-reveal-text txt-huge-responsive txt-align-center">Be <mark
+                    class="mark bg-yellow">BOLD</mark>. Be <mark class="mark bg-purple">EXPRESSIVE</mark>.</h1>
         </div>
     </main>
+    <!-- Footer -->
+    <footer style="background-color: black; padding: 40px; text-align: center;">
+        <p style="color: var(--yellow);">Made with BOLDNESS</p>
+    </footer>
 </body>
 
 <script src="./web/js/script.js"></script>
+<script src="./web/js/generateMenu.js"></script>
+<script src="./web/js/enterAnimation.js"></script>
 
 </html>

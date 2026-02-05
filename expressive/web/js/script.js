@@ -83,11 +83,23 @@ scrollRevealElements.forEach(element => {
 const revealOnScroll = () => {
     scrollRevealElements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
         const windowHeight = window.innerHeight;
         
+        // Check if element is in viewport
         if (elementTop < windowHeight * 0.8) {
             const words = element.querySelectorAll('.word');
-            const scrollProgress = (windowHeight * 0.8 - elementTop) / (windowHeight * 0.5);
+            
+            // Calculate scroll progress, but also check if we're near page bottom
+            const isNearPageBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100;
+            
+            let scrollProgress;
+            if (isNearPageBottom) {
+                // If near bottom, reveal all words
+                scrollProgress = 1;
+            } else {
+                scrollProgress = (windowHeight * 0.8 - elementTop) / (windowHeight * 0.5);
+            }
             
             words.forEach((word, index) => {
                 const wordThreshold = index / words.length;
@@ -133,15 +145,16 @@ function initCounters() {
         const target = +counter.getAttribute('data-target');
         const duration = 2000;
         const increment = target / (duration / 16);
+        const hasPlusSign = counter.getAttribute('data-plus') === 'true';
         let current = 0;
         
         const updateCounter = () => {
             current += increment;
             if (current < target) {
-                counter.textContent = Math.ceil(current);
+                counter.textContent = Math.ceil(current) + (hasPlusSign ? '+' : '');
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target;
+                counter.textContent = target + (hasPlusSign ? '+' : '');
             }
         };
         
