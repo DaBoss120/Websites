@@ -30,6 +30,7 @@ p {
 }
 
 h1 {
+    font-size: 6rem;
     font-family: Awaken Design;
 }
 
@@ -54,11 +55,13 @@ li {
     display: inline-block;
     transform: skew(-15deg);
 }
+
 .txt-italic-revesed {
     display: inline-block;
     transform: skew(15deg);
 }
-.txt-tilted-up{
+
+.txt-tilted-up {
     display: inline-block;
     transform: rotate(-15deg);
 
@@ -71,15 +74,19 @@ li {
 .bg-purple {
     background-color: var(--purple);
 }
+
 .bg-green {
     background-color: var(--green);
 }
+
 .bg-hover-yellow:hover {
     background-color: var(--yellow);
 }
+
 .bg-hover-purple:hover {
     background-color: var(--purple);
 }
+
 .bg-hover-green:hover {
     background-color: var(--green);
 }

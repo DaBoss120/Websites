@@ -23,6 +23,7 @@
     margin: 0 auto;
     padding: 2rem 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -31,7 +32,9 @@
     /* width: 450px;
     height: 600px; */
     width: clamp(300px, 40vw, 450px);
-    margin: 0 30px;
+    /* min-width: 300px; */
+    /* flex-shrink: 0; */
+    margin: 30px;
     aspect-ratio: 3/4;
 }
 
