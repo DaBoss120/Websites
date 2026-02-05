@@ -524,7 +524,7 @@
 }
 
 /* Rotating Text Banner */
-.rotating-banner {
+/* .rotating-banner {
     overflow: hidden;
     background-color: black;
     padding: 15px 0;
@@ -548,6 +548,33 @@
 @keyframes scroll-left {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+} */
+ .rotating-banner {
+    overflow: hidden;
+    background-color: black;
+    padding: 15px 0;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    display: flex;
+    white-space: nowrap;
+}
+
+.rotating-banner-content {
+    display: inline-block;
+    animation: scroll-left 25s linear infinite;
+    flex-shrink: 0;
+}
+
+.rotating-banner-content span {
+    font-family: LuckiestOne;
+    font-size: 1.5rem;
+    color: var(--yellow);
+    padding: 0 15px;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
 }
 
 /* Quote Block */
@@ -827,4 +854,347 @@
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
+}
+/* ============================================
+   TEXT STYLES
+   ============================================ */
+
+/* Slanted Highlight - Text stays straight, highlight is angled */
+.txt-slant-highlight {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.3em;
+    z-index: 1;
+}
+
+.txt-slant-highlight::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    top: 0;
+    bottom: 0;
+    background-color: var(--yellow);
+    transform: skewX(-10deg);
+    z-index: -1;
+}
+
+.txt-slant-highlight.bg-purple::before {
+    background-color: var(--purple);
+}
+
+.txt-slant-highlight.bg-green::before {
+    background-color: var(--green);
+}
+
+/* Underline Thick */
+.txt-underline-thick {
+    display: inline;
+    background-image: linear-gradient(var(--yellow), var(--yellow));
+    background-size: 100% 0.4em;
+    background-repeat: no-repeat;
+    background-position: 0 85%;
+}
+
+.txt-underline-thick.bg-purple {
+    background-image: linear-gradient(var(--purple), var(--purple));
+}
+
+.txt-underline-thick.bg-green {
+    background-image: linear-gradient(var(--green), var(--green));
+}
+
+/* Strikethrough with style */
+.txt-strikethrough {
+    position: relative;
+    display: inline-block;
+}
+
+.txt-strikethrough::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    top: 50%;
+    height: 6px;
+    background-color: var(--purple);
+    transform: rotate(-3deg);
+}
+
+/* Circle Highlight - Text with circle around it */
+.txt-circle-highlight {
+    position: relative;
+    display: inline-block;
+    padding: 0.1em 0.4em;
+}
+
+.txt-circle-highlight::before {
+    content: '';
+    position: absolute;
+    inset: -10px -15px;
+    border: 4px solid black;
+    border-radius: 50%;
+    transform: rotate(-5deg);
+}
+
+/* Scribble Underline */
+.txt-scribble-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.txt-scribble-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 12'%3E%3Cpath d='M0 8 Q 25 0, 50 8 T 100 8' fill='none' stroke='black' stroke-width='3'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: 50px 12px;
+}
+
+/* Outlined Text (Stroke only) */
+.txt-outline {
+    -webkit-text-stroke: 3px black;
+    -webkit-text-fill-color: transparent;
+}
+
+.txt-outline-fill {
+    -webkit-text-stroke: 3px black;
+    -webkit-text-fill-color: var(--yellow);
+}
+
+.txt-outline-fill.fill-purple {
+    -webkit-text-fill-color: var(--purple);
+}
+
+.txt-outline-fill.fill-green {
+    -webkit-text-fill-color: var(--green);
+}
+
+/* Shadow Text - Multiple layered shadows */
+.txt-multi-shadow {
+    text-shadow: 
+        3px 3px 0 var(--yellow),
+        6px 6px 0 var(--purple),
+        9px 9px 0 var(--green);
+}
+
+/* Retro 3D Text */
+.txt-retro-3d {
+    -webkit-text-stroke: 1px white;
+    text-shadow: 
+        1px 1px 0 black,
+        2px 2px 0 black,
+        3px 3px 0 black,
+        4px 4px 0 black,
+        5px 5px 0 black;
+}
+
+/* Glitch Text Effect */
+.txt-glitch {
+    position: relative;
+    display: inline-block;
+}
+
+.txt-glitch::before,
+.txt-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.txt-glitch::before {
+    color: var(--purple);
+    animation: glitch-1 0.3s infinite linear alternate-reverse;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+}
+
+.txt-glitch::after {
+    color: var(--green);
+    animation: glitch-2 0.3s infinite linear alternate-reverse;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch-1 {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 3px); }
+    40% { transform: translate(3px, -3px); }
+    60% { transform: translate(-3px, -3px); }
+    80% { transform: translate(3px, 3px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes glitch-2 {
+    0% { transform: translate(0); }
+    20% { transform: translate(3px, -3px); }
+    40% { transform: translate(-3px, 3px); }
+    60% { transform: translate(3px, 3px); }
+    80% { transform: translate(-3px, -3px); }
+    100% { transform: translate(0); }
+}
+
+/* Box Highlight - Text in a tilted box */
+.txt-box-highlight {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    background-color: var(--yellow);
+    border: 3px solid black;
+    transform: rotate(-2deg);
+}
+
+.txt-box-highlight.bg-purple {
+    background-color: var(--purple);
+}
+
+.txt-box-highlight.bg-green {
+    background-color: var(--green);
+}
+
+/* Gradient Text */
+.txt-gradient {
+    background: linear-gradient(90deg, var(--yellow), var(--purple), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Animated Gradient Text */
+.txt-gradient-animated {
+    background: linear-gradient(90deg, var(--yellow), var(--purple), var(--green), var(--yellow));
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Marker/Highlighter Effect - Rough edges */
+.txt-marker {
+    background: linear-gradient(
+        104deg,
+        transparent 0.9%,
+        var(--yellow) 2.4%,
+        var(--yellow) 97.5%,
+        transparent 97.7%
+    );
+    padding: 0.1em 0.4em;
+    border-radius: 0.8em 0.3em;
+}
+
+.txt-marker.bg-purple {
+    background: linear-gradient(
+        104deg,
+        transparent 0.9%,
+        var(--purple) 2.4%,
+        var(--purple) 97.5%,
+        transparent 97.7%
+    );
+}
+
+.txt-marker.bg-green {
+    background: linear-gradient(
+        104deg,
+        transparent 0.9%,
+        var(--green) 2.4%,
+        var(--green) 97.5%,
+        transparent 97.7%
+    );
+}
+
+/* Stamp Text */
+.txt-stamp {
+    display: inline-block;
+    padding: 0.3em 0.6em;
+    border: 4px solid currentColor;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transform: rotate(-8deg);
+    opacity: 0.9;
+    font-weight: bold;
+}
+
+/* Wavy Text Animation */
+.txt-wavy {
+    display: inline-flex;
+}
+
+.txt-wavy span {
+    display: inline-block;
+    animation: wave 1s ease-in-out infinite;
+}
+
+.txt-wavy span:nth-child(2n) {
+    animation-delay: 0.1s;
+}
+
+.txt-wavy span:nth-child(3n) {
+    animation-delay: 0.2s;
+}
+
+.txt-wavy span:nth-child(4n) {
+    animation-delay: 0.3s;
+}
+
+.txt-wavy span:nth-child(5n) {
+    animation-delay: 0.4s;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Double Text - Overlapping offset */
+.txt-double {
+    position: relative;
+    display: inline-block;
+}
+
+.txt-double::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: var(--purple);
+    z-index: -1;
+    white-space: nowrap;
+}
+
+/* Brackets Highlight */
+.txt-brackets {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.6em;
+}
+
+.txt-brackets::before,
+.txt-brackets::after {
+    font-family: 'Awaken Design';
+    font-size: 1.5em;
+    color: var(--purple);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.txt-brackets::before {
+    content: '[';
+    left: -0.1em;
+}
+
+.txt-brackets::after {
+    content: ']';
+    right: -0.1em;
 }

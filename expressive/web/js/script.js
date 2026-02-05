@@ -1,9 +1,10 @@
 window.addEventListener('DOMContentLoaded', () => {
     const screenWidth = window.innerWidth;
     populateSlideBanner(screenWidth);
-    populateRotatingBanner();
+    populateRotatingBanner(screenWidth);
     initAccordion();
     initCounters();
+    initWavyText();
 });
 
 // Slide Banner
@@ -17,24 +18,32 @@ function populateSlideBanner(screenWidth) {
     });
 }
 
-// Rotating Banner
-function populateRotatingBanner() {
+// Rotating Banner - Using same pattern as expressive-slide with two alternating elements
+function populateRotatingBanner(screenWidth) {
     const bannerWords = ['BOLD', 'EXPRESSIVE', 'PLAYFUL', 'COLORFUL', 'MAXIMALIST', 'CREATIVE', 'UNIQUE'];
-    const banners = [
-        document.getElementById('rotating-banner'),
-        document.getElementById('rotating-banner-footer')
-    ];
+    const banners = document.querySelectorAll('.rotating-banner');
     
     banners.forEach(banner => {
-        if (!banner) return;
-        let html = '';
-        // Duplicate content for seamless loop
-        for (let j = 0; j < 2; j++) {
-            bannerWords.forEach(word => {
-                html += `<span>★ ${word}</span>`;
-            });
+        // Clear existing content
+        banner.innerHTML = '';
+        
+        // Calculate how many repetitions needed to fill the screen
+        const repetitions = Math.ceil(screenWidth / 400) + 2;
+        
+        // Create two identical content divs for seamless loop (like expressive-slide)
+        for (let i = 0; i < 2; i++) {
+            const content = document.createElement('span');
+            content.className = 'rotating-banner-content';
+            
+            let html = '';
+            for (let j = 0; j < repetitions; j++) {
+                bannerWords.forEach(word => {
+                    html += `<span>★ ${word}</span>`;
+                });
+            }
+            content.innerHTML = html;
+            banner.appendChild(content);
         }
-        banner.innerHTML = html;
     });
 }
 
@@ -150,4 +159,21 @@ function initCounters() {
     }, { threshold: 0.5 });
     
     counters.forEach(counter => observer.observe(counter));
+}
+
+// Wavy Text - Split text into spans for animation
+function initWavyText() {
+    const wavyElements = document.querySelectorAll('.txt-wavy');
+    
+    wavyElements.forEach(element => {
+        const text = element.textContent;
+        element.innerHTML = '';
+        
+        text.split('').forEach((char, index) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char; // Preserve spaces
+            span.style.animationDelay = `${index * 0.05}s`;
+            element.appendChild(span);
+        });
+    });
 }
