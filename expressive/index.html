@@ -7,14 +7,9 @@
     <title>Expressive</title>
 
     <link rel="stylesheet" href="web/css/style.css">
-    <!-- <link rel="stylesheet" href="web/css/enterAnimation.css"> -->
-
 </head>
 
-
 <body style="opacity: 1;">
-    <!-- <h1 class="meet">Meet...</h1>
-    <h1 class="expressive">Expressive</h1> -->
     <header>
         <div class="top-header">
             <div class="menu">
@@ -26,52 +21,314 @@
             </div>
         </div>
         <div class="expressive-slide-container">
-            <!-- Force space between the two elements -->
             <h2 class="expressive-slide" id="expressive-slide"></h2><span>&nbsp;</span>
-
-            <h2 class="expressive-slide" id="expressive-slide" aria-hidden="true">
-            </h2>
+            <h2 class="expressive-slide" id="expressive-slide" aria-hidden="true"></h2>
         </div>
     </header>
+
     <main>
+        <!-- Hero Section -->
         <div class="wide-tall-section">
-            <!-- Have elements here in a circle in the style of icloud page -->
             <h1>Welcome to EXPRESSIVE</h1>
         </div>
+
+        <!-- Intro Section -->
         <div class="wide-tall-section bg-yellow">
             <h1 class="scroll-reveal-text txt-huge"><mark class="mark bg-purple">Expressive</mark> is a <span
                     class="txt-italic">style</span> for the <mark class="mark bg-green txt-tilted-up">BOLD</mark></h1>
         </div>
-        <div class="wide-responsive-section bg-yellow">
-            <h1 class="txt-huge">Elements</h1>
-            <div class="wide-responsive-section bg-yellow">
+
+        <!-- Rotating Banner -->
+        <div class="rotating-banner">
+            <div class="rotating-banner-content txt-yellow-all" id="rotating-banner">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <!-- Button Showcase -->
+        <div class="wide-responsive-section bg-purple">
+            <h1 class="txt-huge">Buttons</h1>
+            <p style="max-width: 600px; text-align: center; margin: 20px;">Bold buttons that demand attention and interaction</p>
+            
+            <div class="wide-responsive-section">
                 <div class="sub-element card-element">
                     <div class="card-top-section">
-                        <h2>Expressive is a style for the BOLD</h2>
-                        <p>It can have various content inside.</p>
+                        <h2>3D Stack</h2>
+                        <p>Creates depth with layered shadows</p>
                     </div>
                     <div class="card-bottom-section">
-                        <button class="btn-3d-stack btn-direction-down-left bg-hover-yellow btn-active-retract">View
-                            More</button>
+                        <button class="btn-3d-stack btn-direction-down-left bg-hover-yellow">Hover Me</button>
                     </div>
                 </div>
+
                 <div class="sub-element card-element">
                     <div class="card-top-section">
-                        <h2>This element is a card</h2>
-                        <p>It can have various content inside.</p>
+                        <h2>3D Shadow</h2>
+                        <p>Smooth shadow transitions</p>
                     </div>
                     <div class="card-bottom-section">
-                        <button class="btn-3d-shadow btn-direction-up-left bg-hover-yellow btn-active-retract">View
-                            More</button>
+                        <button class="btn-3d-shadow btn-direction-up-left bg-hover-yellow">Hover Me</button>
+                    </div>
+                </div>
+
+                <div class="sub-element card-element">
+                    <div class="card-top-section">
+                        <h2>Bouncy</h2>
+                        <p>Playful squash and stretch</p>
+                    </div>
+                    <div class="card-bottom-section">
+                        <button class="btn-bouncy">Boing!</button>
+                    </div>
+                </div>
+
+                <div class="sub-element card-element">
+                    <div class="card-top-section">
+                        <h2>Zigzag Edge</h2>
+                        <p>Jagged, ticket-style edges</p>
+                    </div>
+                    <div class="card-bottom-section">
+                        <button class="btn-zigzag">Tear Me</button>
+                    </div>
+                </div>
+
+                <div class="sub-element card-element">
+                    <div class="card-top-section">
+                        <h2>Striped</h2>
+                        <p>Bold construction-style stripes</p>
+                    </div>
+                    <div class="card-bottom-section">
+                        <button class="btn-striped">Warning!</button>
+                    </div>
+                </div>
+
+                <div class="sub-element card-element">
+                    <div class="card-top-section">
+                        <h2>Outline Expand</h2>
+                        <p>Fill animation on hover</p>
+                    </div>
+                    <div class="card-bottom-section">
+                        <button class="btn-outline-expand">Fill Me</button>
+                    </div>
+                </div>
+
+                <div class="sub-element card-element">
+                    <div class="card-top-section">
+                        <h2>Double Border</h2>
+                        <p>Expanding outline effect</p>
+                    </div>
+                    <div class="card-bottom-section">
+                        <button class="btn-double-border">Expand</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="wide-half-section"></div>
+
+        <!-- Divider -->
+        <div class="divider-zigzag"></div>
+
+        <!-- Card Showcase -->
+        <div class="wide-responsive-section bg-green">
+            <h1 class="txt-huge">Cards</h1>
+            <p style="max-width: 600px; text-align: center; margin: 20px;">Expressive containers for your content</p>
+
+            <div class="wide-responsive-section">
+                <div class="sub-element card-stacked">
+                    <h2>Stacked Card</h2>
+                    <p>Multiple layers create visual depth and energy</p>
+                    <button class="btn-bouncy" style="margin-top: 20px;">Learn More</button>
+                </div>
+
+                <div class="sub-element card-torn">
+                    <h2>Torn Paper</h2>
+                            <p>Rough edges for a handcrafted feel</p>
+                            <button class="btn-outline-expand" style="margin-top: 20px;">Explore</button>
+                </div>
+
+                <div class="sub-element card-corner-fold">
+                    <h2>Corner Fold</h2>
+                    <p>A subtle detail that adds character</p>
+                    <button class="btn-striped" style="margin-top: 20px;">Discover</button>
+                </div>
+
+                <div class="sub-element card-polaroid">
+                    <div class="card-image"></div>
+                    <p class="card-caption">Instant Memories</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="wide-responsive-section bg-yellow">
+            <h1 class="txt-huge">By The Numbers</h1>
+            
+            <div class="wide-responsive-section">
+                <div class="stat-counter">
+                    <span class="stat-number filled counter" data-target="100">0</span>
+                    <span class="stat-label">Bold Designs</span>
+                </div>
+                <div class="stat-counter">
+                    <span class="stat-number counter" data-target="50">0</span>
+                    <span class="stat-label">Components</span>
+                </div>
+                <div class="stat-counter">
+                    <span class="stat-number filled counter" data-target="999">0</span>
+                    <span class="stat-label">Lines of CSS</span>
+                </div>
+                <div class="stat-counter">
+                    <span class="stat-number counter" data-target="0">0</span>
+                    <span class="stat-label">Boring Elements</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quote Section -->
+        <div class="section-diagonal">
+            <div class="wide-responsive-section" style="background: transparent;">
+                <div class="quote-block" style="max-width: 700px;">
+                    <p class="txt-big">Design is not just what it looks like and feels like. Design is how it works.</p>
+                    <p style="margin-top: 20px; text-align: right;">— Steve Jobs</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="wide-responsive-section">
+            <h1 class="txt-huge">Features</h1>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 40px;">
+                <ul class="feature-list" style="max-width: 500px;">
+                    <li>Bold typography that commands attention</li>
+                    <li>Vibrant colors that pop off the screen</li>
+                    <li>Playful animations and interactions</li>
+                    <li>Strong borders and visual hierarchy</li>
+                    <li>Handcrafted, human-centered design</li>
+                </ul>
+
+                <div style="display: flex; flex-direction: column; gap: 20px; max-width: 400px;">
+                    <div>
+                        <p style="margin-bottom: 10px;">Boldness Level</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" style="width: 95%;">
+                                <span class="progress-bar-label">95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="margin-bottom: 10px;">Playfulness</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" style="width: 88%;">
+                                <span class="progress-bar-label">88%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="margin-bottom: 10px;">Minimalism</p>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-fill" style="width: 5%;">
+                                <span class="progress-bar-label">5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accordion Section -->
+        <div class="wide-responsive-section bg-yellow">
+            <h1 class="txt-huge">FAQ</h1>
+            
+            <div style="max-width: 700px; width: 100%; padding: 20px;">
+                <div class="accordion-item">
+                    <button class="accordion-header">What is Expressive Design?</button>
+                    <div class="accordion-content">
+                        <p>Expressive design is a bold, maximalist approach that rejects the cold minimalism of modern web design. It embraces color, texture, personality, and playful interactions.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Why choose bold over minimal?</button>
+                    <div class="accordion-content">
+                        <p>Minimalism has its place, but sometimes you need to SHOUT! Expressive design creates memorable experiences that stand out from the sea of sameness.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Is this style accessible?</button>
+                    <div class="accordion-content">
+                        <p>Absolutely! Bold doesn't mean inaccessible. High contrast colors, clear typography, and obvious interactive elements actually improve usability.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Can I use this commercially?</button>
+                    <div class="accordion-content">
+                        <p>This is a style showcase and learning resource. Feel free to take inspiration and adapt these concepts for your own projects!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Badges & Components -->
+        <div class="wide-responsive-section bg-purple">
+            <h1 class="txt-huge">Components</h1>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px;">
+                <span class="badge">NEW</span>
+                <span class="badge" style="background-color: var(--green);">HOT</span>
+                <span class="badge" style="background-color: var(--yellow); color: black;">SALE</span>
+                <span class="badge badge-outline">COMING SOON</span>
+                
+                <div class="tooltip-wrapper">
+                    <button class="btn-bouncy">Hover for tooltip</button>
+                    <div class="tooltip-content">I'm a tooltip!</div>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px;">
+                <div class="icon-circle">🎨</div>
+                <div class="icon-circle bg-yellow">⚡</div>
+                <div class="icon-circle bg-green" >🚀</div>
+                <div class="icon-circle" style="background-color: white;">✨</div>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+                <span class="highlight-box">Highlighted Text</span>
+                <span class="highlight-box bg-green" >Important!</span>
+                <span class="highlight-box bg-purple txt-white">Featured</span>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Ticket Card Demo -->
+        <div class="wide-responsive-section">
+            <div class="card-ticket" style="max-width: 500px; margin: 20px;">
+                <div class="ticket-stub">
+                    <span style="font-family: 'Awaken Design'; font-size: 3rem;">01</span>
+                    <span style="font-family: LuckiestOne;">ADMIT ONE</span>
+                </div>
+                <div class="ticket-main">
+                    <h2>Expressive Design Workshop</h2>
+                    <p style="margin: 15px 0;">Learn the art of bold, maximalist web design</p>
+                    <button class="btn-3d-shadow btn-direction-up-right bg-hover-purple">Get Tickets</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Banner -->
+        <div class="rotating-banner" style="background-color: var(--yellow);">
+            <div class="rotating-banner-content txt-black-all" id="rotating-banner-footer">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
+        <div class="wide-tall-section bg-green">
+            <h1 class="scroll-reveal-text txt-huge">Be <mark class="mark bg-yellow">BOLD</mark>. Be <mark class="mark bg-purple">EXPRESSIVE</mark>.</h1>
+        </div>
     </main>
-
 </body>
-<script src="./web/js/script.js"></script>
-<!-- <script src="./web/js/enterAnimation.js"></script> -->
 
+<script src="./web/js/script.js"></script>
 </html>
