@@ -42,6 +42,9 @@ h2 {
 li {
     list-style: none;
 }
+button{
+    line-height: 1;
+}
 
 body.no-scroll {
     overflow: hidden;
