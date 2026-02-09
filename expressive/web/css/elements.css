@@ -38,8 +38,38 @@
     aspect-ratio: 3/4;
 }
 
-
-
+.rotating-elements-in-circle {
+    position: absolute;
+    width: 40vw;
+    aspect-ratio: 1/1;
+    transform-origin: center;
+    /* transform: translate(-50%, -50%); */
+}
+.rotating-elements-in-circle .rotating-element
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+.rotating-elements-in-circle .rotating-element:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(17.5vw) rotate(0deg);
+}
+.rotating-elements-in-circle .rotating-element:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(60deg) translateX(17.5vw) rotate(-60deg) scale(0.3);
+}
+.rotating-elements-in-circle .rotating-element:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(120deg) translateX(17.5vw) rotate(-120deg);
+}
+.rotating-elements-in-circle .rotating-element:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(180deg) translateX(17.5vw) rotate(-180deg);
+}
+.rotating-elements-in-circle .rotating-element:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(240deg) translateX(17.5vw) rotate(-240deg) scale(0.3);
+}
+.rotating-elements-in-circle .rotating-element:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(300deg) translateX(17.5vw) rotate(-300deg);
+}
 
 /* ============================================
    BUTTON STYLES
