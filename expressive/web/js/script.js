@@ -19,25 +19,48 @@ function populateSlideBanner(screenWidth) {
 }
 function animateRotatingElements() {
     const rotatingElements = document.querySelectorAll('.rotating-elements-in-circle .rotating-element');
-    const rotationSpeed = 0.1; // degrees per frame
+    const rotationSpeed = 0.2; // degrees per frame
+    const radius = 17.5;
+    const elementCount = rotatingElements.length;
 
     rotatingElements.forEach((elem, index) => {
+        // Initialize or get current angle from data attribute
+        let currentAngle = parseFloat(elem.getAttribute('data-angle'));
+        if (isNaN(currentAngle)) {
+            // Initialize with evenly spaced positions around the circle
+            currentAngle = (360 / elementCount) * index;
+        }
 
-        const currentRotationMatrix = window.getComputedStyle(elem).getPropertyValue('transform');  // parseFloat(elem.getAttribute('data-rotation') || '0');}
-        var values = currentRotationMatrix.split('(')[1],
-            values = values.split(')')[0],
-            values = values.split(',');
-        var a = values[0]; // 0.866025
-        var b = values[1]; // 0.5
-        var c = values[2]; // -0.5
-        var d = values[3]; // 0.866025
-        var currentRotationAngle = Math.round(Math.asin(b) * (180 / Math.PI));
-        console.log(currentRotationAngle);
-        console.log(currentRotationMatrix);
-        const newRotationAngle = currentRotationAngle + rotationSpeed;
-        const radius = 17.5;
-        elem.style.transform = `translate(-50%, -50%) rotate(${newRotationAngle}deg) translateX(${radius}vw) rotate(${/*-index * 60*/ - newRotationAngle}deg) ${index === 1 || index === 4 ? 'scale(0.3)' : ''}`;
+        // Increment the angle
+        const newAngle = currentAngle + rotationSpeed;
+        elem.setAttribute('data-angle', newAngle);
+
+        // Position element on circle, counter-rotate to keep it upright
+        const scaleTransform = (index === 1 || index === 4) ? 'scale(0.3)' : '';
+        elem.style.transform = `translate(-50%, -50%) rotate(${newAngle}deg) translateX(${radius}vw) rotate(${-newAngle}deg) ${scaleTransform}`;
     });
+    // const rotatingElements = document.querySelectorAll('.rotating-elements-in-circle .rotating-element');
+    // const rotationSpeed = 0.1; // degrees per frame
+
+    // rotatingElements.forEach((elem, index) => {
+
+    //     const currentRotationMatrix = window.getComputedStyle(elem).getPropertyValue('transform');  // parseFloat(elem.getAttribute('data-rotation') || '0');}
+    //     var values = currentRotationMatrix.split('(')[1],
+    //         values = values.split(')')[0],
+    //         values = values.split(',');
+    //     var a = values[0]; // 0.866025
+    //     var b = values[1]; // 0.5
+    //     var c = values[2]; // -0.5
+    //     var d = values[3]; // 0.866025
+    //     var scale = Math.sqrt(a*a + b*b);
+    //     var sin = b/scale;
+    //     var currentRotationAngle = Math.round(Math.asin(sin) * (180 / Math.PI));
+    //     console.log(currentRotationAngle);
+    //     console.log(currentRotationMatrix);
+    //     const newRotationAngle = currentRotationAngle + rotationSpeed;
+    //     const radius = 17.5;
+    //     elem.style.transform = `translate(-50%, -50%) rotate(${index * 60 + newRotationAngle}deg) translateX(${radius}vw) rotate(${-index * 60 - newRotationAngle}deg) ${index === 1 || index === 4 ? 'scale(0.3)' : ''}`;
+    // });
 }
 setInterval(animateRotatingElements, 16); // ~60fps
 
