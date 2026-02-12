@@ -20,7 +20,7 @@ function populateSlideBanner(screenWidth) {
 function animateRotatingElements() {
     const rotatingElements = document.querySelectorAll('.rotating-elements-in-circle .rotating-element');
     const rotationSpeed = 0.2; // degrees per frame
-    const radius = 17.5;
+    const radius = window.innerWidth >= 768 ? 17.5 : 65; // Adjust radius for mobile
     const elementCount = rotatingElements.length;
 
     rotatingElements.forEach((elem, index) => {

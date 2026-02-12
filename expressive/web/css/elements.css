@@ -51,6 +51,10 @@
     top: 50%;
     left: 50%;
     transform-origin: center;
+    animation: transform 0.2s linear;
+    button, h2{
+            white-space: nowrap;
+    }
 }
 .rotating-elements-in-circle .rotating-element:nth-child(1) {
     transform: translate(-50%, -50%) rotate(0deg) translateX(17.5vw) rotate(0deg);
@@ -69,6 +73,29 @@
 }
 .rotating-elements-in-circle .rotating-element:nth-child(6) {
     transform: translate(-50%, -50%) rotate(300deg) translateX(17.5vw) rotate(-300deg);
+}
+@media (max-width: 768px) {
+    .rotating-elements-in-circle {
+        transform: scale(0.6);
+    }
+    .rotating-elements-in-circle .rotating-element:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(100vw) rotate(0deg);
+    }
+    .rotating-elements-in-circle .rotating-element:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(60deg) translateX(35vw) rotate(-60deg) scale(0.3);
+    }
+    .rotating-elements-in-circle .rotating-element:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(120deg) translateX(35vw) rotate(-120deg);
+    }
+    .rotating-elements-in-circle .rotating-element:nth-child(4) {
+        transform: translate(-50%, -50%) rotate(180deg) translateX(35vw) rotate(-180deg);
+    }
+    .rotating-elements-in-circle .rotating-element:nth-child(5) {
+        transform: translate(-50%, -50%) rotate(240deg) translateX(35vw) rotate(-240deg) scale(0.3);
+    }
+    .rotating-elements-in-circle .rotating-element:nth-child(6) {
+        transform: translate(-50%, -50%) rotate(300deg) translateX(35vw) rotate(-300deg);
+    }
 }
 
 /* ============================================
@@ -650,6 +677,14 @@
     color: black;
     -webkit-text-stroke: 4px black;
     -webkit-text-fill-color: transparent;
+    /* Prevent text wrapping to new line during animation */
+    white-space: nowrap;
+    /* Makes all digits equal width */
+    font-variant-numeric: tabular-nums;
+    /* Reserve space for the final number */
+    min-width: 3ch;
+    /* Center the number in the reserved space */
+    text-align: center;
 }
 
 .stat-number.filled {
@@ -1197,6 +1232,7 @@
 .txt-double {
     position: relative;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .txt-double::before {
