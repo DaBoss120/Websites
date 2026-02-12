@@ -53,6 +53,12 @@ li {
 }
 button{
     line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    -webkit-appearance: none;
+    text-rendering: geometricPrecision;
 }
 body.no-scroll {
     overflow: hidden;
