@@ -6,6 +6,8 @@
 @font-face {
     font-family: Awaken Design;
     src: url(../font/Awaken\ Design.ttf);
+    ascent-override: 90%;
+    descent-override: 30%;
 }
 
 @font-face {
@@ -16,6 +18,8 @@
 @font-face {
     font-family: LuckiestOne;
     src: url(../font/LuckiestGuy-Regular.ttf);
+    ascent-override: 90%;
+    descent-override: 30%;
 }
 
 * {
