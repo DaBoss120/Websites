@@ -46,14 +46,19 @@ header .logo {
     * {
         -webkit-tap-highlight-color: transparent;
     }
-
+    body{
+        padding-top: 80px;
+    }
     header {
         height: 80px;
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
         background-color: var(--dark);
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         z-index: 100;
     }
 

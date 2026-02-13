@@ -69,6 +69,17 @@
         /*cubic-bezier(.34,.57,.62,1)*/
         cubic-bezier(.25, .3, .25, 1);
 }
+/* .inline-arrow {
+    opacity: 0;
+    max-width: 0px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 0px;
+    transform: translateX(-8px);
+    filter: blur(4px);
+    transition: max-width 0.3s ease, margin-left 0.4s ease, transform 0.3s ease, opacity 0.3s linear, filter 1.1s cubic-bezier(.25, .3, .25, 1);
+} */
 
 .has-arrow:hover .inline-arrow {
     opacity: 1;
@@ -179,7 +190,7 @@
 @media (max-width: 768px) {
     .banner-container video {
         width: 100%;
-        height: 75vh;
+        height: calc(100vh - 80px);
         /* or a fixed height like 400px */
         object-fit: cover;
         object-position: center;
