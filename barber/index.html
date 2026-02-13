@@ -35,7 +35,9 @@
     <div class="menu-overlay" onclick="toggleMenu()"></div>
     <main>
         <div class="banner-container">
-            <video src="./web/video/banner-video.mp4" autoplay muted loop></video>
+            <video autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <source src="./web/video/banner-video.mp4" type="video/mp4">
+            </video>
             <div class="overlay-video">
                 <h1>Welcome to Our Barber Shop</h1>
                 <p>Experience the best grooming services in town</p>
