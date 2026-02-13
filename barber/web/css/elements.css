@@ -1,0 +1,194 @@
+.has-arrow {
+    transition: color 0.3s ease;
+}
+
+.hover-motion-blur:hover {
+    animation: motion-blur 0.3s ease
+}
+
+.hover-motion-blur {
+    animation: motion-blur-out 0.3s ease;
+}
+
+.hover-color-gold:hover {
+    color: var(--gold);
+}
+
+.hover-bg-color-gold {
+    transition: background-color 0.3s ease;
+}
+
+.hover-bg-color-gold:hover {
+    background-color: var(--gold);
+}
+
+.outline-regular-white {
+    outline: 1.5px solid var(--light);
+    outline-offset: 5px;
+}
+
+@keyframes motion-blur {
+    0% {
+        filter: blur(0px);
+    }
+
+    50% {
+        filter: blur(1px);
+    }
+
+    100% {
+        filter: blur(0);
+    }
+}
+
+@keyframes motion-blur-out {
+    0% {
+        filter: blur(0px);
+    }
+
+    50% {
+        filter: blur(1px);
+    }
+
+    100% {
+        filter: blur(0);
+    }
+}
+
+.inline-arrow {
+    opacity: 0;
+    max-width: 0px;
+    /* overflow: hidden; */
+    display: inline-block;
+    /* position: relative; */
+    font-size: 1.2rem;
+    margin-left: 0px;
+    transform: translateX(-8px);
+    filter: blur(4px);
+    transition: max-width 0.3s ease, margin-left 0.4s ease, transform 0.3s ease, opacity 0.3s linear, filter 1.1s
+        /*cubic-bezier(.34,.57,.62,1)*/
+        cubic-bezier(.25, .3, .25, 1);
+}
+
+.has-arrow:hover .inline-arrow {
+    opacity: 1;
+    max-width: 30px;
+    margin-left: 10px;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-container video {
+    width: 100vw;
+    /* max-width: 1500px; */
+    filter: brightness(0.5);
+    height: auto;
+    object-fit: cover;
+}
+
+.overlay-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light);
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.overlay-video h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.overlay-video p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.reservation-element-container {
+    width: 100%;
+    height: auto;
+    padding: 200px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.reservation-element {
+    width: 400px;
+    height: 250px;
+    background-color: transparent;
+    margin: 40px 20px;
+    padding: 20px;
+    outline: 2px solid var(--gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.reservation-element h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.reservation-element p {
+    font-size: 1rem;
+    color: var(--light);
+    margin-bottom: 7px;
+}
+.reservation-element .price {
+    font-size: 1.2rem;
+    color: var(--gold);
+    font-weight: bold;
+}
+.reservation-element button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 5px 15px;
+    /* margin-top: 20px; */
+    align-self: flex-end;
+    margin-left: auto;
+}
+.bottom-section{
+    margin-top: auto;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    filter : blur(4px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, filter 1.1s cubic-bezier(.25, .3, .25, 1);
+}
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+@media (max-width: 768px) {
+    .banner-container video {
+        width: 100%;
+        height: 75vh;
+        /* or a fixed height like 400px */
+        object-fit: cover;
+        object-position: center;
+    }
+    .reservation-element-container {
+        padding: 100px 50px;
+    }
+    .reservation-element{
+        width: 100%;
+        margin: 20px 0px;
+    }
+}

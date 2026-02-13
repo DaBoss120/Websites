@@ -2,12 +2,174 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    position: relative;
+    z-index: 100;
 }
-.menu ul{
+
+header .logo {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    border-radius: 100%;
+
+}
+
+.menu ul {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     list-style: none;
+    height: 80px;
+}
+
+.menu ul li {
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-overlay {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    header {
+        height: 80px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        background-color: var(--dark);
+        position: relative;
+        z-index: 100;
+    }
+
+    header .logo {
+        position: relative;
+        left: 0;
+        width: 50px;
+        z-index: 101;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .hamburger input {
+        display: none;
+    }
+
+    .menu {
+        position: absolute;
+        top: 80px;
+        /* starts right below the header bar */
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        background-color: var(--dark);
+        z-index: 99;
+        transition: max-height 0.6s ease;
+        /*cubic-bezier(0.25, 0.10, 0.07, 1.00) */
+        border-bottom: 0px solid var(--gold);
+    }
+
+    .menu.menu-open {
+        max-height: 500px;
+        /* adjust if you have more links */
+        border-bottom: 2px solid var(--gold);
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .menu ul li {
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    .menu ul li a {
+        padding: 12px 30px;
+        font-size: 1.3rem;
+        width: 100%;
+        justify-content: flex-start;
+
+        /* Default hidden state — interruptible via transition, not animation */
+        opacity: 0;
+        transform: translateY(15px);
+        filter: blur(4px);
+        transition: opacity 0.3s ease,
+            transform 0.3s ease,
+            filter 1.1s cubic-bezier(.25, .3, .25, 1),
+            color 0.3s ease;
+    }
+
+    /* Staggered reveal when menu is open */
+    .menu.menu-open ul li a {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+    .menu.menu-open ul li:nth-child(1) a {
+        transition-delay: 0.1s;
+    }
+
+    .menu.menu-open ul li:nth-child(2) a {
+        transition-delay: 0.2s;
+    }
+
+    .menu.menu-open ul li:nth-child(3) a {
+        transition-delay: 0.3s;
+    }
+
+    .menu.menu-open ul li:nth-child(4) a {
+        transition-delay: 0.4s;
+    }
+
+    /* When closing, no delay so items disappear immediately */
+    .menu:not(.menu-open) ul li a {
+        transition-delay: 0s;
+    }
+
+    .menu-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 98;
+        /* below menu (99) and header (100+) */
+        pointer-events: none;
+        transition: background-color 0.4s ease;
+    }
+
+    .menu-overlay.active {
+        background-color: rgba(0, 0, 0, 0.6);
+        pointer-events: auto;
+    }
 }

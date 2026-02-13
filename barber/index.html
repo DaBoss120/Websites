@@ -1,21 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barber Shop</title>
     <link rel="stylesheet" href="./web/css/style.css">
 </head>
+
 <body>
     <header>
+        <img src="./web/img/logo.png" alt="Barber Shop Logo" class="logo">
         <nav class="menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Reservations</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="has-arrow hover-color-gold hover-motion-blur">Home <span
+                            class="inline-arrow">&#129030;<!--&#8594;--></span></a></li>
+                <li><a href="#" class="has-arrow hover-color-gold hover-motion-blur">Services <span
+                            class="inline-arrow">&#129030;</span></a></li>
+                <li><a href="#" class="has-arrow hover-color-gold hover-motion-blur">Reservations <span
+                            class="inline-arrow">&#129030;</span></a></li>
+                <li><a href="#" class="has-arrow hover-color-gold hover-motion-blur">Contact <span
+                            class="inline-arrow">&#129030;</span></a></li>
             </ul>
         </nav>
+        <label class="hamburger">
+        <input type="checkbox" onclick="toggleMenu()">
+        <svg viewBox="0 0 100 80" width="25" height="25" fill="var(--light)">
+            <rect width="100" height="12" rx="4"></rect>
+            <rect y="34" width="100" height="12" rx="4"></rect>
+            <rect y="68" width="100" height="12" rx="4"></rect>
+        </svg>
+    </label>
+    <div class="menu-overlay" onclick="toggleMenu()"></div>
     </header>
+    <main>
+        <div class="banner-container">
+            <video src="./web/video/banner-video.mp4" autoplay muted loop></video>
+            <div class="overlay-video">
+                <h1>Welcome to Our Barber Shop</h1>
+                <p>Experience the best grooming services in town</p>
+                <button class="btn-white btn-big-padding-x has-arrow hover-bg-color-gold outline-regular-white">Book now
+                    <span class="inline-arrow">&#129030;</span></button>
+            </div>
+        </div>
+        <div class="reservation-element-container">
+            <div class="reservation-element reveal-on-scroll">
+                <div class="top-section">
+                    <h3>Full cut</h3>
+                    <p>Our full cut service includes a complete haircut, styling, and grooming to ensure you look your
+                        best.</p>
+                    <p class="price">$30</p>
+                </div>
+                <div class="bottom-section">
+                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                            class="inline-arrow">&#129030;</span></button>
+                </div>
+            </div>
+            <div class="reservation-element reveal-on-scroll">
+                <div class="top-section">
+                    <h3>Beard Trim</h3>
+                    <p>Professional beard shaping and trimming to maintain your perfect look with precision and care.
+                    </p>
+                    <p class="price">$20</p>
+                </div>
+                <div class="bottom-section">
+                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                            class="inline-arrow">&#129030;</span></button>
+                </div>
+            </div>
+            <div class="reservation-element reveal-on-scroll">
+                <div class="top-section">
+                    <h3>Hot Towel Shave</h3>
+                    <p>Experience the classic luxury of a traditional straight razor shave with hot towel treatment.</p>
+                    <p class="price">$35</p>
+                </div>
+                <div class="bottom-section">
+                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                            class="inline-arrow">&#129030;</span></button>
+                </div>
+            </div>
+            <div class="reservation-element reveal-on-scroll">
+                <div class="top-section">
+                    <h3>Hair & Beard Combo</h3>
+                    <p>Complete grooming package combining our full cut service with a professional beard trim.</p>
+                    <p class="price">$45</p>
+                </div>
+                <div class="bottom-section">
+                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                            class="inline-arrow">&#129030;</span></button>
+                </div>
+            </div>
+            <div class="reservation-element reveal-on-scroll">
+                <div class="top-section">
+                    <h3>Kids Haircut</h3>
+                    <p>Gentle and patient haircut service designed specifically for children of all ages.</p>
+                    <p class="price">$20</p>
+                </div>
+                <div class="bottom-section">
+                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                            class="inline-arrow">&#129030;</span></button>
+                </div>
+            </div>
+            <div class="reservation-element reveal-on-scroll">
+                <div class="top-section">
+                    <h3>Deluxe Package</h3>
+                    <p>The ultimate grooming experience: haircut, hot towel shave, beard trim, and scalp massage.</p>
+                    <p class="price">$70</p>
+                </div>
+                <div class="bottom-section">
+                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                            class="inline-arrow">&#129030;</span></button>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
+<script src="./web/js/script.js"></script>
+
 </html>

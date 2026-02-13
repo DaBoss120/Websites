@@ -1,0 +1,34 @@
+/* @layer basic-styles, specific-styles;
+
+@layer specific-styles {
+    .btn-big-padding-x {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+} */
+
+button{
+    font-family: Inter;
+}
+
+.btn-white {
+    background-color: var(--light);
+    color: #000;
+    border: none;
+    padding: 15px 60px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    /* border-radius: 2px; */
+  
+}
+.btn-gold{
+    background-color: var(--gold);
+    color: #000;
+    border: none;
+    padding: 15px 60px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    /* border-radius: 2px; */
+}
