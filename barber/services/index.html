@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services — Barber Shop</title>
+    <link rel="shortcut icon" href="../web/img/logo.png" type="image/x-icon">
+    <meta name="theme-color" content="#1E1A14">
+    <link rel="stylesheet" href="../web/css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="../web/img/logo.png" alt="Barber Shop Logo" class="logo">
+        <nav class="menu">
+        </nav>
+        <label class="hamburger">
+            <input type="checkbox" onclick="toggleMenu()">
+            <svg viewBox="0 0 100 80" width="25" height="25" fill="var(--light)">
+                <rect width="100" height="12" rx="4"></rect>
+                <rect y="34" width="100" height="12" rx="4"></rect>
+                <rect y="68" width="100" height="12" rx="4"></rect>
+            </svg>
+        </label>
+    </header>
+    <div class="menu-overlay" onclick="toggleMenu()"></div>
+
+    <main>
+        <!-- Page Hero -->
+        <div class="page-hero" style="background-image: url('../web/video/banner-video.mp4');">
+            <div class="page-hero-content">
+                <h1>Our Services</h1>
+                <hr class="divider-gold">
+                <p>Precision grooming services tailored to the modern gentleman</p>
+            </div>
+        </div>
+
+        <!-- Detailed Service List -->
+        <div class="section-title">
+            <h2>What We Offer</h2>
+            <hr class="divider-gold">
+            <p>Every service is delivered with care, skill, and premium products</p>
+        </div>
+
+        <div class="service-detail-container">
+            <div class="service-detail-card reveal-on-scroll">
+                <div class="service-detail-number">01</div>
+                <div class="service-detail-body">
+                    <h3>Full Cut</h3>
+                    <p>A complete haircut experience from consultation to styling. We take the time to understand your
+                        preferences and deliver a cut that complements your features.</p>
+                    <ul class="detail-includes">
+                        <li>Consultation & style advice</li>
+                        <li>Precision scissor or clipper cut</li>
+                        <li>Wash & blow-dry finish</li>
+                        <li>Styling product application</li>
+                    </ul>
+                    <div class="service-detail-price-row">
+                        <span class="service-detail-price">$30</span>
+                        <span class="service-detail-duration">45 minutes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-detail-card reveal-on-scroll">
+                <div class="service-detail-number">02</div>
+                <div class="service-detail-body">
+                    <h3>Beard Trim</h3>
+                    <p>Expert beard shaping and trimming using precision tools. We sculpt your beard to achieve a clean,
+                        defined look that suits your face shape.</p>
+                    <ul class="detail-includes">
+                        <li>Beard shape consultation</li>
+                        <li>Trimming & line-up</li>
+                        <li>Hot towel application</li>
+                        <li>Beard oil finish</li>
+                    </ul>
+                    <div class="service-detail-price-row">
+                        <span class="service-detail-price">$20</span>
+                        <span class="service-detail-duration">25 minutes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-detail-card reveal-on-scroll">
+                <div class="service-detail-number">03</div>
+                <div class="service-detail-body">
+                    <h3>Hot Towel Shave</h3>
+                    <p>The classic barbershop luxury. A traditional straight razor shave with steaming hot towels for
+                        the
+                        smoothest, closest shave possible.</p>
+                    <ul class="detail-includes">
+                        <li>Pre-shave hot towel wrap</li>
+                        <li>Premium lather application</li>
+                        <li>Straight razor shave</li>
+                        <li>Post-shave balm & cold towel</li>
+                    </ul>
+                    <div class="service-detail-price-row">
+                        <span class="service-detail-price">$35</span>
+                        <span class="service-detail-duration">35 minutes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-detail-card reveal-on-scroll">
+                <div class="service-detail-number">04</div>
+                <div class="service-detail-body">
+                    <h3>Hair & Beard Combo</h3>
+                    <p>Our most popular package — a full haircut paired with a professional beard trim. The complete
+                        grooming solution for men who want to look their absolute best.</p>
+                    <ul class="detail-includes">
+                        <li>Full consultation</li>
+                        <li>Complete haircut & style</li>
+                        <li>Beard trim & shape</li>
+                        <li>Hot towel & finishing products</li>
+                    </ul>
+                    <div class="service-detail-price-row">
+                        <span class="service-detail-price">$45</span>
+                        <span class="service-detail-duration">60 minutes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-detail-card reveal-on-scroll">
+                <div class="service-detail-number">05</div>
+                <div class="service-detail-body">
+                    <h3>Kids Haircut</h3>
+                    <p>A patient and fun haircut experience designed for children. We make sure your little one looks
+                        great and enjoys the visit.</p>
+                    <ul class="detail-includes">
+                        <li>Gentle consultation with parent</li>
+                        <li>Careful precision cut</li>
+                        <li>Fun, relaxed atmosphere</li>
+                        <li>Styled finish</li>
+                    </ul>
+                    <div class="service-detail-price-row">
+                        <span class="service-detail-price">$20</span>
+                        <span class="service-detail-duration">30 minutes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-detail-card reveal-on-scroll">
+                <div class="service-detail-number">06</div>
+                <div class="service-detail-body">
+                    <h3>Deluxe Package</h3>
+                    <p>The ultimate head-to-beard grooming experience. Relax in our chair and leave looking like a
+                        completely new man. Our signature offering.</p>
+                    <ul class="detail-includes">
+                        <li>Full haircut & style</li>
+                        <li>Hot towel straight razor shave</li>
+                        <li>Beard sculpting & trim</li>
+                        <li>Scalp massage & premium products</li>
+                    </ul>
+                    <div class="service-detail-price-row">
+                        <span class="service-detail-price">$70</span>
+                        <span class="service-detail-duration">90 minutes</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="section-title">
+            <h2>Frequently Asked</h2>
+            <hr class="divider-gold">
+            <p>Common questions about our services</p>
+        </div>
+
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Do I need to book an appointment?
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>While we do accept walk-ins, we highly recommend booking an appointment to guarantee your
+                        preferred time slot and barber. You can book through our contact page or by calling us
+                        directly.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    What products do you use?
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>We use only premium, professional-grade grooming products. Our selection includes top brands
+                        known for quality ingredients that are gentle on your skin and hair while delivering excellent
+                        results.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    How long does each service take?
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Service times vary: a full cut takes about 45 minutes, a beard trim about 25 minutes, and our
+                        deluxe package runs approximately 90 minutes. We never rush — quality takes time.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Do you offer gift cards?
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Yes! Gift cards are available in any denomination and make a perfect gift. Visit us in-store or
+                        contact us to purchase one. They never expire.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner">
+            <h2>Find Your Perfect Service</h2>
+            <p>Not sure which service is right for you? Get in touch and we'll help you choose.</p>
+            <button class="btn-outline-gold btn-big-padding-x has-arrow" onclick="location.href='../contact/'">Contact
+                Us <span class="inline-arrow">&#8594;</span></button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="../">Home</a>
+                <a href="../services/">Services</a>
+                <a href="../ourteam/">Our Team</a>
+                <a href="../contact/">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <p>Mon – Fri: 9:00 AM – 8:00 PM</p>
+                <p>Saturday: 9:00 AM – 6:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>123 Main Street, Downtown</p>
+                <a href="tel:+15551234567">(555) 123-4567</a>
+                <a href="mailto:info@barbershop.com">info@barbershop.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Barber Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="../web/js/script.js"></script>
+
+</html>

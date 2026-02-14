@@ -43,9 +43,6 @@ header .logo {
 }
 
 @media (max-width: 768px) {
-    * {
-        -webkit-tap-highlight-color: transparent;
-    }
     /* Uncomment body and header for sticky top bar */
     /* body{
         padding-top: 80px;
@@ -87,19 +84,26 @@ header .logo {
         /* starts right below the header bar */
         left: 0;
         width: 100%;
-        max-height: 0;
+        height: 0px;
         overflow: hidden;
         background-color: var(--dark);
         z-index: 99;
-        transition: max-height 0.6s ease;
+        transition: border-bottom 0.3s ease, height 0.3s ease;
         /*cubic-bezier(0.25, 0.10, 0.07, 1.00) */
-        border-bottom: 0px solid var(--gold);
+        /* border-bottom: 0px solid var(--gold); */
+        border-bottom: 2px solid #0000;
+        
+        
     }
 
     .menu.menu-open {
-        max-height: 500px;
-        /* adjust if you have more links */
-        border-bottom: 2px solid var(--gold);
+        /* adjust if more links */
+        /* height: calc-size(auto, size); */
+        /* Exact calc-size. Change to calc-size logic when better supported */
+        height: 237.33px;
+        border-bottom: 2px solid var(--gold) ;
+        transition: height 0.5s ease, border-bottom 0.1s ease;
+        /* transition: border-bottom 0.3s ease; */
     }
 
     .menu ul {

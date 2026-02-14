@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Barber Shop</title>
+    <link rel="shortcut icon" href="../web/img/logo.png" type="image/x-icon">
+    <meta name="theme-color" content="#1E1A14">
+    <link rel="stylesheet" href="../web/css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="../web/img/logo.png" alt="Barber Shop Logo" class="logo">
+        <nav class="menu">
+
+        </nav>
+        <label class="hamburger">
+            <input type="checkbox" onclick="toggleMenu()">
+            <svg viewBox="0 0 100 80" width="25" height="25" fill="var(--light)">
+                <rect width="100" height="12" rx="4"></rect>
+                <rect y="34" width="100" height="12" rx="4"></rect>
+                <rect y="68" width="100" height="12" rx="4"></rect>
+            </svg>
+        </label>
+    </header>
+    <div class="menu-overlay" onclick="toggleMenu()"></div>
+
+    <main>
+        <!-- Page Hero -->
+        <div class="page-hero" style="background-image: url('../web/video/banner-video.mp4');">
+            <div class="page-hero-content">
+                <h1>Get in Touch</h1>
+                <hr class="divider-gold">
+                <p>We'd love to hear from you — book, ask, or just say hello</p>
+            </div>
+        </div>
+
+        <!-- Contact Form + Info -->
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <hr class="divider-gold">
+            <p>Fill out the form below or reach us through any of the channels listed</p>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Form Column -->
+            <div class="contact-form-column reveal-on-scroll">
+                <form class="contact-form" onsubmit="event.preventDefault();">
+                    <div>
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label for="contact-email">Email Address</label>
+                        <input type="email" id="contact-email" placeholder="john@example.com" required>
+                    </div>
+                    <div>
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" placeholder="(555) 000-0000">
+                    </div>
+                    <div>
+                        <label for="contact-service">Service Interest</label>
+                        <input type="text" id="contact-service" placeholder="e.g. Full Cut, Beard Trim, Deluxe Package">
+                    </div>
+                    <div>
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" placeholder="Tell us what you're looking for..."
+                            rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">
+                        Send Message <span class="inline-arrow">&#8594;</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Info Column -->
+            <div class="contact-info-column reveal-on-scroll">
+                <div class="info-card">
+                    <h4>Visit Us</h4>
+                    <p>123 Main Street</p>
+                    <p>Downtown, NY 10001</p>
+                </div>
+                <div class="info-card">
+                    <h4>Call Us</h4>
+                    <a href="tel:+15551234567">(555) 123-4567</a>
+                </div>
+                <div class="info-card">
+                    <h4>Email Us</h4>
+                    <a href="mailto:info@barbershop.com">info@barbershop.com</a>
+                </div>
+                <div class="info-card">
+                    <h4>Opening Hours</h4>
+                    <p>Mon – Fri: 9:00 AM – 8:00 PM</p>
+                    <p>Saturday: 9:00 AM – 6:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076797932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1234567890"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+</body>
+<script src="../web/js/script.js"></script>
+
+</html>

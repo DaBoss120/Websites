@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team — Barber Shop</title>
+    <link rel="shortcut icon" href="../web/img/logo.png" type="image/x-icon">
+    <meta name="theme-color" content="#1E1A14">
+    <link rel="stylesheet" href="../web/css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="../web/img/logo.png" alt="Barber Shop Logo" class="logo">
+        <nav class="menu">
+            <ul>
+                <li><a href="../" class="has-arrow hover-color-gold hover-motion-blur">Home <span
+                            class="inline-arrow">&#8594;</span></a></li>
+                <li><a href="../services/" class="has-arrow hover-color-gold hover-motion-blur">Services <span
+                            class="inline-arrow">&#8594;</span></a></li>
+                <li><a href="../ourteam/" class="has-arrow hover-color-gold hover-motion-blur">Our Team <span
+                            class="inline-arrow">&#8594;</span></a></li>
+                <li><a href="../contact/" class="has-arrow hover-color-gold hover-motion-blur">Contact <span
+                            class="inline-arrow">&#8594;</span></a></li>
+            </ul>
+        </nav>
+        <label class="hamburger">
+            <input type="checkbox" onclick="toggleMenu()">
+            <svg viewBox="0 0 100 80" width="25" height="25" fill="var(--light)">
+                <rect width="100" height="12" rx="4"></rect>
+                <rect y="34" width="100" height="12" rx="4"></rect>
+                <rect y="68" width="100" height="12" rx="4"></rect>
+            </svg>
+        </label>
+    </header>
+    <div class="menu-overlay" onclick="toggleMenu()"></div>
+
+    <main>
+        <!-- Page Hero -->
+        <div class="page-hero" style="background-image: url('../web/video/banner-video.mp4');">
+            <div class="page-hero-content">
+                <h1>Our Team</h1>
+                <hr class="divider-gold">
+                <p>The skilled hands behind every great cut</p>
+            </div>
+        </div>
+
+        <!-- Team Introduction -->
+        <div class="section-title">
+            <h2>Meet the Barbers</h2>
+            <hr class="divider-gold">
+            <p>Each member of our team brings years of expertise, passion, and a dedication to craft</p>
+        </div>
+
+        <!-- Team Grid -->
+        <div class="team-grid">
+            <div class="team-card reveal-on-scroll">
+                <div class="team-card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                        alt="Marcus Johnson" class="team-card-image">
+                </div>
+                <h3>Marcus Johnson</h3>
+                <p class="team-role">Master Barber & Founder</p>
+                <p class="team-bio">With over 15 years of experience, Marcus founded the shop with a vision for
+                    excellence. He specializes in classic cuts and straight razor shaves.</p>
+            </div>
+            <div class="team-card reveal-on-scroll">
+                <div class="team-card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+                        alt="David Chen" class="team-card-image">
+                </div>
+                <h3>David Chen</h3>
+                <p class="team-role">Senior Barber</p>
+                <p class="team-bio">David is known for his meticulous fades and modern styles. A perfectionist at
+                    heart, he ensures every line is crisp and every blend is seamless.</p>
+            </div>
+            <div class="team-card reveal-on-scroll">
+                <div class="team-card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
+                        alt="Anthony Rivera" class="team-card-image">
+                </div>
+                <h3>Anthony Rivera</h3>
+                <p class="team-role">Senior Barber</p>
+                <p class="team-bio">Anthony brings creativity and energy to every appointment. His specialty is textured
+                    cuts and beard sculpting, combining art with precision.</p>
+            </div>
+            <div class="team-card reveal-on-scroll">
+                <div class="team-card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face"
+                        alt="Thomas Wright" class="team-card-image">
+                </div>
+                <h3>Thomas Wright</h3>
+                <p class="team-role">Barber</p>
+                <p class="team-bio">The youngest member of our team, Thomas has an eye for contemporary trends. He
+                    excels in creative styling and modern interpretations of classic looks.</p>
+            </div>
+            <div class="team-card reveal-on-scroll">
+                <div class="team-card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face"
+                        alt="Robert Kim" class="team-card-image">
+                </div>
+                <h3>Robert Kim</h3>
+                <p class="team-role">Barber & Colorist</p>
+                <p class="team-bio">Robert combines traditional barbering with modern color techniques. If you're
+                    looking for something bold or a subtle refresh, he's your go-to.</p>
+            </div>
+            <div class="team-card reveal-on-scroll">
+                <div class="team-card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&h=400&fit=crop&crop=face"
+                        alt="James Mitchell" class="team-card-image">
+                </div>
+                <h3>James Mitchell</h3>
+                <p class="team-role">Barber</p>
+                <p class="team-bio">James prides himself on creating a relaxed, welcoming experience. His hot towel
+                    shaves are legendary, and his attention to detail is second to none.</p>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stat-strip">
+            <div class="stat-card reveal-on-scroll">
+                <p class="stat-number">75+</p>
+                <p class="stat-label">Combined Years</p>
+            </div>
+            <div class="stat-card reveal-on-scroll">
+                <p class="stat-number">6</p>
+                <p class="stat-label">Expert Barbers</p>
+            </div>
+            <div class="stat-card reveal-on-scroll">
+                <p class="stat-number">100%</p>
+                <p class="stat-label">Satisfaction</p>
+            </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner">
+            <h2>Book With Your Favorite Barber</h2>
+            <p>Choose your preferred barber and secure your appointment today.</p>
+            <button class="btn-outline-gold btn-big-padding-x has-arrow" onclick="location.href='../contact/'">Make a
+                Booking <span class="inline-arrow">&#8594;</span></button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <a href="../">Home</a>
+                <a href="../services/">Services</a>
+                <a href="../ourteam/">Our Team</a>
+                <a href="../contact/">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <p>Mon – Fri: 9:00 AM – 8:00 PM</p>
+                <p>Saturday: 9:00 AM – 6:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>123 Main Street, Downtown</p>
+                <a href="tel:+15551234567">(555) 123-4567</a>
+                <a href="mailto:info@barbershop.com">info@barbershop.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Barber Shop. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="../web/js/script.js"></script>
+
+</html>

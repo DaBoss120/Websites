@@ -7,7 +7,7 @@
     }
 } */
 
-button{
+button {
     font-family: Inter;
 }
 
@@ -18,17 +18,67 @@ button{
     padding: 15px 60px;
     font-size: 20px;
     cursor: pointer;
-    border: none;
-    /* border-radius: 2px; */
-  
 }
-.btn-gold{
+
+.btn-gold {
     background-color: var(--gold);
     color: #000;
     border: none;
     padding: 15px 60px;
     font-size: 20px;
     cursor: pointer;
+}
+
+.btn-outline-gold {
+    background-color: transparent;
+    color: var(--gold);
+    border: 1.5px solid var(--gold);
+    padding: 15px 60px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--gold);
+    color: var(--dark);
+}
+
+.btn-outline-light {
+    background-color: transparent;
+    color: var(--light);
+    border: 1.5px solid var(--light);
+    padding: 15px 60px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.btn-dark {
+    background-color: var(--dark);
+    color: var(--light);
     border: none;
-    /* border-radius: 2px; */
+    padding: 15px 60px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: var(--dark-gray);
+}
+
+.btn-big-padding-x {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btn-small {
+    padding: 10px 30px;
+    font-size: 0.9rem;
 }

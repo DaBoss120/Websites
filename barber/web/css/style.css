@@ -18,6 +18,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+
 }
 
 html,
@@ -69,7 +71,10 @@ a {
     text-decoration: none;
     color: var(--light);
 }
-
+::selection {
+    background: var(--gold);
+    color: var(--dark);
+}
 .col-3 {
     columns: 3;
 }

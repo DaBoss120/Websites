@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barber Shop</title>
+    <link rel="shortcut icon" href="./web/img/logo.png" type="image/x-icon">
+    <meta name="theme-color" content="#1E1A14">
     <link rel="stylesheet" href="./web/css/style.css">
 </head>
 
@@ -12,16 +14,7 @@
     <header>
         <img src="./web/img/logo.png" alt="Barber Shop Logo" class="logo">
         <nav class="menu">
-            <ul>
-                <li><a href="#" class="has-arrow hover-color-gold hover-motion-blur">Home <span
-                            class="inline-arrow">&#8594;<!--&#129030;--></span></a></li>
-                <li><a href="#" class="has-arrow hover-color-gold hover-motion-blur">Services <span
-                            class="inline-arrow">&#8594;</span></a></li>
-                <li><a href="#" class="has-arrow hover-color-gold hover-motion-blur">Reservations <span
-                            class="inline-arrow">&#8594;</span></a></li>
-                <li><a href="#" class="has-arrow hover-color-gold hover-motion-blur">Contact <span
-                            class="inline-arrow">&#8594;</span></a></li>
-            </ul>
+
         </nav>
         <label class="hamburger">
             <input type="checkbox" onclick="toggleMenu()">
@@ -34,27 +27,57 @@
     </header>
     <div class="menu-overlay" onclick="toggleMenu()"></div>
     <main>
+        <!-- Hero Banner -->
         <div class="banner-container">
             <video autoplay muted loop playsinline webkit-playsinline preload="auto">
-                    <source src="./web/video/banner-video.mp4" type="video/mp4">
+                <source src="./web/video/banner-video.mp4" type="video/mp4">
             </video>
             <div class="overlay-video">
                 <h1>Welcome to Our Barber Shop</h1>
                 <p>Experience the best grooming services in town</p>
-                <button class="btn-white btn-big-padding-x has-arrow hover-bg-color-gold outline-regular-white">Book now
+                <button class="btn-white btn-big-padding-x has-arrow hover-bg-color-gold outline-regular-white"
+                    onclick="location.href='./contact/'">Book now
                     <span class="inline-arrow">&#8594;</span></button>
             </div>
         </div>
+
+        <!-- Stats Strip -->
+        <div class="stat-strip">
+            <div class="stat-card reveal-on-scroll">
+                <p class="stat-number">15+</p>
+                <p class="stat-label">Years Experience</p>
+            </div>
+            <div class="stat-card reveal-on-scroll">
+                <p class="stat-number">10k+</p>
+                <p class="stat-label">Happy Clients</p>
+            </div>
+            <div class="stat-card reveal-on-scroll">
+                <p class="stat-number">6</p>
+                <p class="stat-label">Expert Barbers</p>
+            </div>
+            <div class="stat-card reveal-on-scroll">
+                <p class="stat-number">20+</p>
+                <p class="stat-label">Awards Won</p>
+            </div>
+        </div>
+
+        <!-- Services Preview -->
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <hr class="divider-gold">
+            <p>Premium grooming crafted with precision and care</p>
+        </div>
+
         <div class="reservation-element-container">
             <div class="reservation-element reveal-on-scroll">
                 <div class="top-section">
-                    <h3>Full cut</h3>
+                    <h3>Full Cut</h3>
                     <p>Our full cut service includes a complete haircut, styling, and grooming to ensure you look your
                         best.</p>
                     <p class="price">$30</p>
                 </div>
                 <div class="bottom-section">
-                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                    <button class="btn-gold btn-big-padding-x has-arrow">Book now <span
                             class="inline-arrow">&#8594;</span></button>
                 </div>
             </div>
@@ -66,7 +89,7 @@
                     <p class="price">$20</p>
                 </div>
                 <div class="bottom-section">
-                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                    <button class="btn-gold btn-big-padding-x has-arrow">Book now <span
                             class="inline-arrow">&#8594;</span></button>
                 </div>
             </div>
@@ -77,7 +100,7 @@
                     <p class="price">$35</p>
                 </div>
                 <div class="bottom-section">
-                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                    <button class="btn-gold btn-big-padding-x has-arrow">Book now <span
                             class="inline-arrow">&#8594;</span></button>
                 </div>
             </div>
@@ -88,7 +111,7 @@
                     <p class="price">$45</p>
                 </div>
                 <div class="bottom-section">
-                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                    <button class="btn-gold btn-big-padding-x has-arrow">Book now <span
                             class="inline-arrow">&#8594;</span></button>
                 </div>
             </div>
@@ -99,7 +122,7 @@
                     <p class="price">$20</p>
                 </div>
                 <div class="bottom-section">
-                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                    <button class="btn-gold btn-big-padding-x has-arrow">Book now <span
                             class="inline-arrow">&#8594;</span></button>
                 </div>
             </div>
@@ -110,12 +133,55 @@
                     <p class="price">$70</p>
                 </div>
                 <div class="bottom-section">
-                    <button class="btn-gold btn-big-padding-x has-arrow hover-bg-color-light">Book now <span
+                    <button class="btn-gold btn-big-padding-x has-arrow">Book now <span
                             class="inline-arrow">&#8594;</span></button>
                 </div>
             </div>
         </div>
+
+        <!-- Testimonials -->
+        <div class="section-title">
+            <h2>What Our Clients Say</h2>
+            <hr class="divider-gold">
+            <p>Trusted by thousands across the city</p>
+        </div>
+
+        <div class="testimonial-container">
+            <div class="testimonial-card reveal-on-scroll">
+                <p class="quote">"The best barbershop experience I've ever had. The attention to detail is unmatched and
+                    the atmosphere is absolutely top-notch."</p>
+                <div class="bottom-section">
+                    <p class="author">James W.</p>
+                </div>
+            </div>
+            <div class="testimonial-card reveal-on-scroll">
+                <p class="quote">"I've been coming here for over two years. Every visit is consistent — great service,
+                    great conversation, great results."</p>
+                <div class="bottom-section">
+                    <p class="author">Michael R.</p>
+                </div>
+            </div>
+            <div class="testimonial-card reveal-on-scroll">
+                <p class="quote">"The hot towel shave is an experience in itself. Pure luxury. This is the only place I
+                    trust with a straight razor."</p>
+                <div class="bottom-section">
+                    <p class="author">David K.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-banner">
+            <h2>Ready for a Fresh Look?</h2>
+            <p>Book your appointment today and experience grooming like never before.</p>
+            <button class="btn-outline-gold btn-big-padding-x has-arrow" onclick="location.href='./contact/'">Reserve
+                Your Seat <span class="inline-arrow">&#8594;</span></button>
+        </div>
     </main>
+
+    <!-- Footer -->
+    <footer>
+    </footer>
 </body>
 <script src="./web/js/script.js"></script>
 
