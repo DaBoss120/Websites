@@ -13,17 +13,18 @@
 //     });
 // }
 
+const gitHubPagesURL = 'https://daboss120.github.io/Websites/barber/';
 function generateMenu() {
     const menu = document.querySelector('.menu');
     if (menu) {
         menu.innerHTML = `<ul>
-                <li><a href="/" class="has-arrow hover-color-gold hover-motion-blur">Home <span
+                <li><a href="${gitHubPagesURL}" class="has-arrow hover-color-gold hover-motion-blur">Home <span
                             class="inline-arrow">&#8594;</span></a></li>
-                <li><a href="/services/" class="has-arrow hover-color-gold hover-motion-blur">Services <span
+                <li><a href="${gitHubPagesURL}services/" class="has-arrow hover-color-gold hover-motion-blur">Services <span
                             class="inline-arrow">&#8594;</span></a></li>
-                <li><a href="/ourteam/" class="has-arrow hover-color-gold hover-motion-blur">Our Team <span
+                <li><a href="${gitHubPagesURL}ourteam/" class="has-arrow hover-color-gold hover-motion-blur">Our Team <span
                             class="inline-arrow">&#8594;</span></a></li>
-                <li><a href="/contact/" class="has-arrow hover-color-gold hover-motion-blur">Contact <span
+                <li><a href="${gitHubPagesURL}contact/" class="has-arrow hover-color-gold hover-motion-blur">Contact <span
                             class="inline-arrow">&#8594;</span></a></li>
             </ul>`;
     }
@@ -35,10 +36,10 @@ function generateFooter() {
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Navigation</h4>
-                <a href="/">Home</a>
-                <a href="/services/">Services</a>
-                <a href="/ourteam/">Our Team</a>
-                <a href="/contact/">Contact</a>
+                <a href="${gitHubPagesURL}">Home</a>
+                <a href="${gitHubPagesURL}services/">Services</a>
+                <a href="${gitHubPagesURL}ourteam/">Our Team</a>
+                <a href="${gitHubPagesURL}contact/">Contact</a>
             </div>
             <div class="footer-col">
                 <h4>Hours</h4>
